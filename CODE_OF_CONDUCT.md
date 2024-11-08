@@ -1,8 +1,6 @@
 # Contributor Covenant Code of Conduct
 
-## Other Languages
-
-- [Versión en Español (Código de Conducta)](./docs_es/CODE_OF_CONDUCT.md)
+English | [ Español ](./docs_es/CODE_OF_CONDUCT.md)
 
 ## Our Pledge
 

@@ -1,8 +1,6 @@
 # Código de Conducta convenido para Contribuyentes
 
-## Other Languages
-
-- [English Version (Code of Conduct)](../CODE_OF_CONDUCT.md)
+Español | [English](../CODE_OF_CONDUCT.md)
 
 ## Nuestro compromiso
 
