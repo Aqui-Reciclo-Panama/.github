@@ -1,0 +1,30 @@
+---
+name: Feature Request
+about: Suggest a new feature or improvement
+title: ''
+labels: 'feature request'
+assignees: ''
+
+---
+
+**1. Background**  
+Briefly explain what motivates this feature request. For example, "It would be helpful if [...]" or "Currently, I notice that [...]"
+
+**2. Describe the Solution You'd Like**  
+Clearly explain what you'd like to see happen, outlining any new functionality or changes to existing features.
+
+**3. Describe Alternatives You've Considered**  
+List any alternative solutions or approaches you've considered that could achieve similar results.
+
+**4. Additional Context**  
+Include any other relevant information that might help in understanding this request. You can add screenshots, links, or other details here.
+
+---
+
+**Have You Checked for Similar Requests?**  
+Please ensure this request hasn't already been discussed in a prior issue by searching our issues list.  
+- [ ] Yes, I have checked for similar requests, and this is unique.
+
+**Have You Read Our Code of Conduct?**  
+Please confirm you've read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md).  
+- [ ] Yes, I have read the Code of Conduct.
