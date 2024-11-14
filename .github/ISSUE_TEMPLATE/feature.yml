@@ -1,6 +1,6 @@
-name: "Feature Request"
+name: "♻️ Feature Request"
 description: "Suggest a new feature or improvement for our project."
-title: "Provide a short title for your feature request"
+title: "♻️ Feature Request: ..."
 labels: ["feature"]
 assignees: []
 
@@ -8,13 +8,12 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Thank you for contributing!**  
-        Please provide as much detail as possible to help us understand and implement your feature request.
+        Thanks for taking the time to fill out our form 🙏
 
   - type: textarea
     id: background
     attributes:
-      label: "Motivation and Background"
+      label: "📅 Background"
       description: "Explain the motivation behind this feature request. Describe why it would be helpful or what need it fulfills."
       placeholder: "It would be helpful if [...]"
     validations:
@@ -23,25 +22,16 @@ body:
   - type: textarea
     id: solution
     attributes:
-      label: "Describe the Solution You'd Like"
+      label: "🎯 Describe the Solution You'd Like"
       description: "Clearly describe what you’d like to see happen, outlining any new functionality or changes."
       placeholder: "Describe the desired outcome or behavior."
     validations:
       required: true
 
   - type: textarea
-    id: alternatives
-    attributes:
-      label: "Describe Alternatives You've Considered"
-      description: "List any alternative solutions or approaches you’ve considered that could achieve similar results."
-      placeholder: "Describe other possible solutions."
-    validations:
-      required: false
-
-  - type: textarea
     id: additional_context
     attributes:
-      label: "Additional Context"
+      label: "📷 Additional Context"
       description: "Include any other relevant information, screenshots, or examples to help us understand your request better."
       placeholder: "Provide extra details if available."
     validations:
