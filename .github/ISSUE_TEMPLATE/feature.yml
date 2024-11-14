@@ -1,30 +1,61 @@
 ---
 name: Feature Request
 about: Suggest a new feature or improvement
-title: ''
-labels: 'feature request'
-assignees: ''
+title: "Provide a short title for your feature request"
+labels: ["feature"]
+assignees: []
 
 ---
 
-**1. Background**  
-Briefly explain what motivates this feature request. For example, "It would be helpful if [...]" or "Currently, I notice that [...]"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **1. Background**  
+        Briefly explain what motivates this feature request. For example, "It would be helpful if [...]" or "Currently, I notice that [...]"
 
-**2. Describe the Solution You'd Like**  
-Clearly explain what you'd like to see happen, outlining any new functionality or changes to existing features.
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivation and Background"
+      description: "Briefly explain the motivation or context behind this feature request."
+      placeholder: "Explain why this feature would be helpful or what need it fulfills."
 
-**3. Describe Alternatives You've Considered**  
-List any alternative solutions or approaches you've considered that could achieve similar results.
+  - type: textarea
+    id: solution
+    attributes:
+      label: "Describe the Solution You'd Like"
+      description: "Clearly explain what you’d like to see happen, outlining any new functionality or changes."
+      placeholder: "Describe the desired outcome or behavior."
 
-**4. Additional Context**  
-Include any other relevant information that might help in understanding this request. You can add screenshots, links, or other details here.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "Describe Alternatives You've Considered"
+      description: "List any alternative solutions or approaches you’ve considered."
+      placeholder: "Describe other possible solutions."
 
----
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Include any other relevant information, screenshots, or examples."
+      placeholder: "Provide extra details that can help with understanding your request."
 
-**Have You Checked for Similar Requests?**  
-Please ensure this request hasn't already been discussed in a prior issue by searching our issues list.  
-- [ ] Yes, I have checked for similar requests, and this is unique.
+  - type: checkboxes
+    id: similar-requests
+    attributes:
+      label: "Have You Checked for Similar Requests?"
+      description: "Ensure this request hasn’t already been discussed in a prior issue."
+      options:
+        - label: "Yes, I have checked for similar requests, and this is unique."
+          required: true
 
-**Have You Read Our Code of Conduct?**  
-Please confirm you've read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md).  
-- [ ] Yes, I have read the Code of Conduct.
+  - type: checkboxes
+    id: code-of-conduct
+    attributes:
+      label: "Have You Read Our Code of Conduct?"
+      description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
+      options:
+        - label: "Yes, I have read the Code of Conduct."
+          required: true
