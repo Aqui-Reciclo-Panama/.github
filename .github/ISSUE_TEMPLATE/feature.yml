@@ -1,58 +1,68 @@
----
-name: Feature Request
-about: Suggest a new feature or improvement
+name: "Feature Request"
+description: "Suggest a new feature or improvement for our project."
 title: "Provide a short title for your feature request"
 labels: ["feature"]
 assignees: []
-
----
 
 body:
   - type: markdown
     attributes:
       value: |
-        **1. Background**  
-        Briefly explain what motivates this feature request. For example, "It would be helpful if [...]" or "Currently, I notice that [...]"
+        **Thank you for contributing!**  
+        Please provide as much detail as possible to help us understand and implement your feature request.
 
   - type: textarea
-    id: motivation
+    id: background
     attributes:
-      label: "Motivation and Background"
-      description: "Briefly explain the motivation or context behind this feature request."
-      placeholder: "Explain why this feature would be helpful or what need it fulfills."
+      label: "Background"
+      description: "Explain the motivation behind this feature request. Describe why it would be helpful or what need it fulfills."
+      placeholder: "It would be helpful if [...]"
+    validations:
+      required: true
 
   - type: textarea
     id: solution
     attributes:
       label: "Describe the Solution You'd Like"
-      description: "Clearly explain what you’d like to see happen, outlining any new functionality or changes."
+      description: "Clearly describe what you’d like to see happen, outlining any new functionality or changes."
       placeholder: "Describe the desired outcome or behavior."
+    validations:
+      required: true
 
   - type: textarea
     id: alternatives
     attributes:
       label: "Describe Alternatives You've Considered"
-      description: "List any alternative solutions or approaches you’ve considered."
+      description: "List any alternative solutions or approaches you’ve considered that could achieve similar results."
       placeholder: "Describe other possible solutions."
+    validations:
+      required: false
 
   - type: textarea
-    id: additional-context
+    id: additional_context
+    attributes:
+
+
+  - type: textarea
+    id: additional_context
     attributes:
       label: "Additional Context"
-      description: "Include any other relevant information, screenshots, or examples."
-      placeholder: "Provide extra details that can help with understanding your request."
+      description: "Include any other relevant information, screenshots, or examples to help us understand your request better."
+      placeholder: "Provide extra details if available."
+    validations:
+      required: false
 
   - type: checkboxes
-    id: similar-requests
+    id: similar_requests
     attributes:
       label: "Have You Checked for Similar Requests?"
-      description: "Ensure this request hasn’t already been discussed in a prior issue."
+      description: "Ensure this request hasn’t already been discussed in a prior issue by searching our issues list."
       options:
         - label: "Yes, I have checked for similar requests, and this is unique."
           required: true
 
   - type: checkboxes
-    id: code-of-conduct
+    id: code_of_conduct
     attributes:
       label: "Have You Read Our Code of Conduct?"
       description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
