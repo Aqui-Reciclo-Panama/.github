@@ -1,0 +1,67 @@
+name: "🐞 Bug Report"
+description: "Submit a bug report to help us improve."
+title: "🐞 Bug Report: ..."
+labels: ["bug"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out our form 🙏
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "📝 Reproduction steps"
+      description: "How do you trigger this bug? Please walk us through it step by step."
+      placeholder: "When I [...]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "🤙 Expected behavior"
+      description: "What did you think would happen?"
+      placeholder: "It should [...]"
+    validations:
+      required: true
+
+    - type: textarea
+    id: actual
+    attributes:
+      label: "👎 Actual Behavior"
+      description: "What did actually happen? Add screenshots, if applicable."
+      placeholder: "It actually [...]"
+    validations:
+      required: true
+
+    - type: dropdown
+    id: browsers
+    attributes:
+      label: "🌐 What browsers are you seeing the problem on?""
+      multiple: true
+      options:
+        - "Firefox"
+        - "Chrome"
+        - "Safari"
+        - "Microsoft Edge"
+
+    - type: checkboxes
+      id: similar_requests
+      attributes:
+        label: "Have You Checked for Similar Requests?"
+        description: "Ensure this request hasn’t already been discussed in a prior issue by searching our issues list."
+        options:
+          - label: "Yes, I have checked for similar requests, and this is unique."
+            required: true
+
+    - type: checkboxes
+      id: code_of_conduct
+      attributes:
+        label: "Have You Read Our Code of Conduct?"
+        description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
+        options:
+          - label: "Yes, I have read and agree to the Code of Conduct."
+            required: true
