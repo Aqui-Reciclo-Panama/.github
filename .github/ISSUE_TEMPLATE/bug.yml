@@ -28,7 +28,7 @@ body:
     validations:
       required: true
 
-    - type: textarea
+  - type: textarea
     id: actual
     attributes:
       label: "👎 Actual Behavior"
@@ -37,10 +37,10 @@ body:
     validations:
       required: true
 
-    - type: dropdown
+  - type: dropdown
     id: browsers
     attributes:
-      label: "🌐 What browsers are you seeing the problem on?""
+      label: "🌐 What browsers are you seeing the problem on?"
       multiple: true
       options:
         - "Firefox"
@@ -48,20 +48,20 @@ body:
         - "Safari"
         - "Microsoft Edge"
 
-    - type: checkboxes
-      id: similar_requests
-      attributes:
-        label: "Have You Checked for Similar Requests?"
-        description: "Ensure this request hasn’t already been discussed in a prior issue by searching our issues list."
-        options:
-          - label: "Yes, I have checked for similar requests, and this is unique."
-            required: true
+  - type: checkboxes
+    id: similar_requests
+    attributes:
+      label: "Have You Checked for Similar Requests?"
+      description: "Ensure this request hasn’t already been discussed in a prior issue by searching our issues list."
+      options:
+        - label: "Yes, I have checked for similar requests, and this is unique."
+          required: true
 
-    - type: checkboxes
-      id: code_of_conduct
-      attributes:
-        label: "Have You Read Our Code of Conduct?"
-        description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
-        options:
-          - label: "Yes, I have read and agree to the Code of Conduct."
-            required: true
+  - type: checkboxes
+    id: code_of_conduct
+    attributes:
+      label: "Have You Read Our Code of Conduct?"
+      description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
+      options:
+        - label: "Yes, I have read and agree to the Code of Conduct."
+          required: true
