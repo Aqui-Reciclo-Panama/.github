@@ -13,6 +13,6 @@ Welcome to **Aquí Reciclo Panamá**! Our mission is to ensure that every Panama
 We’re always looking for contributors and collaborators who are passionate about sustainability and open-source development. Whether you’re a developer, designer, QA specialist, product analyst, or sustainability enthusiast, you’re welcome to join our community and help us expand this project.
 
 ### Quick Links
-- **[Explore Our Repositories]( )**
-- **[Contribute to the Project]( )**
-- **[Project Roadmap]( )**
+- **[Explore Our Repositories](https://github.com/orgs/Aqui-Reciclo-Panama/repositories)**
+- **[Contribute to the Project](https://github.com/Aqui-Reciclo-Panama/aqui_reciclo_pa/blob/develop/CONTRIBUTING.md)**
+- **[Project Roadmap](https://github.com/orgs/Aqui-Reciclo-Panama/projects/1)**
