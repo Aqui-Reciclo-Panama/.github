@@ -1,0 +1,430 @@
+name: "♻️ Reportar Punto de Reciclaje"
+description: "Reportar un nuevo punto de reciclaje o actualizar información de uno existente."
+title: "♻️ Punto de Reciclaje: ..."
+labels: ["punto-reciclaje"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ¡Gracias por ayudarnos a mantener actualizado el directorio de reciclaje! 🌱
+        Por favor proporciona la mayor cantidad de detalles posibles.
+
+  - type: dropdown
+    id: tipo_reporte
+    attributes:
+      label: "📋 Tipo de Reporte"
+      description: "¿Qué tipo de información deseas reportar?"
+      options:
+        - "Nuevo Punto de Reciclaje"
+        - "Actualización de Punto Existente"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: fuente_informacion
+    attributes:
+      label: "🔍 Fuente de Información"
+      description: "¿Cómo obtuviste esta información?"
+      options:
+        - "Trabajo/soy dueño del punto de reciclaje"
+        - "Visité el punto personalmente"
+        - "Lo vi en redes sociales/internet"
+        - "Otro"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 📄 ¿Eres dueño u operador del punto?
+        Si eres dueño u operador del punto de reciclaje, puedes descargar nuestra [plantilla completa](templates/template-recycling-center.xlsx) y subirla con toda la información de tu punto. Esto nos ayudará a procesar tu información más rápidamente.
+
+        **📎 Sube tu plantilla completa aquí:**
+
+  - type: textarea
+    id: plantilla_completa
+    attributes:
+      label: "📎 Plantilla Completa (Arrastra y suelta el archivo aquí)"
+      description: "Si completaste nuestra plantilla, pega aquí el contenido"
+      placeholder: "Arrastra y suelta tu archivo aquí."
+    validations:
+      required: false
+
+  # SECCIÓN PARA PUNTOS NUEVOS
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🆕 Información para Nuevo Punto de Reciclaje
+        *Completa esta sección solo si seleccionaste "Nuevo Punto de Reciclaje"*
+
+  - type: input
+    id: nombre_punto_nuevo
+    attributes:
+      label: "📍 Nombre del Punto Limpio"
+      description: "Nombre del centro de reciclaje o punto limpio"
+      placeholder: "Centro ABC"
+    validations:
+      required: false
+
+  - type: input
+    id: entidad_empresa_nuevo
+    attributes:
+      label: "🏢 Entidad/Empresa"
+      description: "Organización o empresa que opera el punto de reciclaje"
+      placeholder: "Empresa ABC / Municipio ABC"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: provincia_nuevo
+    attributes:
+      label: "🗺️ Provincia"
+      description: "Selecciona la provincia donde se encuentra el punto de reciclaje"
+      options:
+        - "Bocas del Toro"
+        - "Chiriquí"
+        - "Coclé"
+        - "Colón"
+        - "Darién"
+        - "Herrera"
+        - "Los Santos"
+        - "Panamá"
+        - "Panamá Oeste"
+        - "Veraguas"
+        - "Guna Yala"
+        - "Emberá-Wounaan"
+        - "Ngäbe-Buglé"
+    validations:
+      required: false
+
+  - type: input
+    id: distrito_nuevo
+    attributes:
+      label: "🏘️ Distrito"
+      description: "Distrito donde se encuentra el punto de reciclaje"
+      placeholder: "Nombre Distrito"
+    validations:
+      required: false
+
+  - type: input
+    id: corregimiento_nuevo
+    attributes:
+      label: "📍 Corregimiento"
+      description: "Corregimiento donde se encuentra el punto de reciclaje"
+      placeholder: "Nombre Corregimiento"
+    validations:
+      required: false
+
+  - type: textarea
+    id: direccion_nuevo
+    attributes:
+      label: "🏠 Dirección Exacta"
+      description: "Dirección completa del punto de reciclaje"
+      placeholder: "Calle 50, Edificio Torre Global, Planta Baja"
+    validations:
+      required: false
+
+  - type: input
+    id: google_maps_nuevo
+    attributes:
+      label: "🗺️ Enlace de Google Maps"
+      description: "Enlace de Google Maps donde se encuentra el punto de reciclaje"
+      placeholder: "https://maps.google.com/..."
+    validations:
+      required: false
+
+  - type: input
+    id: telefono_nuevo
+    attributes:
+      label: "📞 Teléfono de Contacto del Punto"
+      description: "Número de teléfono del punto de reciclaje (no tu número personal)"
+      placeholder: "+507 123-4567"
+    validations:
+      required: false
+
+  - type: input
+    id: email_nuevo
+    attributes:
+      label: "📧 Email de Contacto del Punto"
+      description: "Dirección de correo electrónico del punto de reciclaje (no tu email personal)"
+      placeholder: "info@reciclaje.com"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: incentivos_nuevo
+    attributes:
+      label: "💰 ¿Ofrece Incentivos?"
+      description: "¿El punto de reciclaje ofrece incentivos?"
+      options:
+        - "Sí"
+        - "No"
+        - "No lo sé"
+    validations:
+      required: false
+
+  - type: textarea
+    id: describir_incentivos_nuevo
+    attributes:
+      label: "🎁 Describir Incentivos"
+      description: "Si ofrece incentivos, describe cuáles son"
+      placeholder: "Descuentos, dinero en efectivo, etc."
+    validations:
+      required: false
+
+  - type: textarea
+    id: horarios_nuevo
+    attributes:
+      label: "🕐 Horarios de Atención"
+      description: "Horarios de atención del punto de reciclaje"
+      placeholder: "Lunes a Viernes: 8:00 AM - 5:00 PM\nSábados: 8:00 AM - 12:00 PM\nDomingos: Cerrado"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: materiales_no_peligrosos_nuevo
+    attributes:
+      label: "♻️ Materiales No Peligrosos que Acepta"
+      description: "Selecciona todos los materiales no peligrosos que acepta"
+      options:
+        - label: "Periódicos"
+        - label: "Directorios / Guías Telefónicas"
+        - label: "Revista"
+        - label: "Papel Blanco (bond)"
+        - label: "Papel de Color"
+        - label: "Papel Mixto, Caribe, Mezclado"
+        - label: "Plástico 1 (PET)"
+        - label: "Plástico 2 (HDPE)"
+        - label: "Plástico 5 (PP)"
+        - label: "5 Polipropileno (PP)"
+        - label: "Plástico 3 (PVC)"
+        - label: "Plástico 6 (PS)"
+        - label: "Cartón"
+        - label: "Botellas de Amor"
+        - label: "EcoBricks"
+        - label: "Latas"
+        - label: "Hojalata (latas de conserva)"
+        - label: "Hierro"
+        - label: "Bronce"
+        - label: "Cobre"
+        - label: "Acero inoxidable"
+        - label: "Chatarra"
+        - label: "TetraPak"
+        - label: "Vidrio Verde"
+        - label: "Vidrio Ámbar/Chocolate"
+        - label: "Vidrio Transparente"
+        - label: "Vidrio Plano"
+        - label: "Espejos"
+        - label: "Pallets de Madera"
+        - label: "Llantas de caucho"
+        - label: "Residuos orgánicos"
+        - label: "Residuos de construcción y demolición"
+        - label: "Textiles"
+        - label: "Residuos voluminosos"
+
+  - type: checkboxes
+    id: materiales_peligrosos_nuevo
+    attributes:
+      label: "⚠️ Materiales Peligrosos que Acepta"
+      description: "Selecciona todos los materiales peligrosos que acepta"
+      options:
+        - label: "Aceite de cocina"
+        - label: "Aceite de motor"
+        - label: "Envases de plaguicidas"
+        - label: "Cartuchos de tintas y tóner"
+        - label: "Envases de aerosoles"
+        - label: "Alcalinas"
+        - label: "Litio"
+        - label: "Ácido de gel"
+        - label: "Ácido en líquido"
+
+  - type: checkboxes
+    id: raee_nuevo
+    attributes:
+      label: "🔌 RAEE (Residuos de Aparatos Eléctricos y Electrónicos) que Acepta"
+      description: "Selecciona todos los residuos electrónicos que acepta"
+      options:
+        - label: "Lámparas y bombillas"
+        - label: "Paneles fotovoltaicos"
+        - label: "Monitores de pantalla plana y similares"
+        - label: "Monitores con tubos de rayos catódicos"
+        - label: "Televisores"
+        - label: "Lavadoras"
+        - label: "Calentadores"
+        - label: "Bicicletas eléctricas"
+        - label: "Copiadoras"
+        - label: "Aparatos médicos y de laboratorio (grandes)"
+        - label: "Contadores"
+        - label: "Celulares"
+        - label: "Tablets"
+        - label: "Computadoras"
+        - label: "Impresoras"
+        - label: "Microondas"
+        - label: "Consolas de juego"
+        - label: "Aires acondicionados"
+        - label: "Refrigeradores"
+        - label: "Compresores"
+        - label: "Congeladores"
+        - label: "Radiadores"
+
+  # SECCIÓN PARA ACTUALIZACIONES
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🔄 Información para Actualización de Punto Existente
+        *Completa esta sección solo si seleccionaste "Actualización de Punto Existente"*
+
+        **⚠️ IMPORTANTE:** Para actualizar un punto existente, debes usar el nombre EXACTO como aparece en nuestro directorio de puntos de reciclaje. Si no estás seguro del nombre exacto, consulta nuestro [directorio público](ENLACE_AL_DIRECTORIO) antes de continuar.
+
+  - type: input
+    id: nombre_punto_actualizar
+    attributes:
+      label: "📍 Nombre EXACTO del Punto a Actualizar"
+      description: "⚠️ CRÍTICO: Debe ser el nombre exacto como aparece en nuestro directorio. Si no coincide exactamente, no podremos procesar la actualización."
+      placeholder: "Escriba el nombre exacto como aparece en el directorio"
+    validations:
+      required: false
+
+  - type: textarea
+    id: ubicacion_punto_actualizar
+    attributes:
+      label: "🗺️ Ubicación del Punto"
+      description: "Ayúdanos a confirmar que es el punto correcto: provincia, distrito, dirección aproximada"
+      placeholder: "Panamá, Distrito de Panamá, Calle 50..."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: que_cambio
+    attributes:
+      label: "🔍 ¿Qué ha cambiado?"
+      description: "Selecciona todos los cambios que quieres reportar"
+      options:
+        - label: "Horarios de atención"
+        - label: "El punto ya no existe / cerró permanentemente"
+        - label: "Ahora recicla materiales adicionales"
+        - label: "Ya no recicla algunos materiales que tenían listados"
+        - label: "Cambio de ubicación"
+        - label: "Cambio de información de contacto (teléfono, email)"
+        - label: "Cambio en incentivos ofrecidos"
+        - label: "Otro cambio"
+
+  - type: textarea
+    id: detalle_horarios
+    attributes:
+      label: "🕐 Nuevos Horarios de Atención"
+      description: "Si seleccionaste cambio de horarios, proporciona los nuevos horarios"
+      placeholder: "Lunes a Viernes: 9:00 AM - 4:00 PM\nSábados: 8:00 AM - 12:00 PM\nDomingos: Cerrado"
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_cierre
+    attributes:
+      label: "🚫 Detalles del Cierre"
+      description: "Si el punto cerró, proporciona detalles (cuándo, por qué, si es temporal)"
+      placeholder: "Cerró el mes pasado, el local está vacío..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_materiales_nuevos
+    attributes:
+      label: "➕ Materiales Nuevos que Acepta"
+      description: "Si ahora recicla materiales adicionales, especifica cuáles"
+      placeholder: "Ahora también acepta: pilas, aceite de cocina usado..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_materiales_removidos
+    attributes:
+      label: "➖ Materiales que Ya No Acepta"
+      description: "Si ya no recicla algunos materiales, especifica cuáles"
+      placeholder: "Ya no acepta: vidrio, textiles..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_ubicacion
+    attributes:
+      label: "📍 Nueva Ubicación"
+      description: "Si cambió de ubicación, proporciona la nueva dirección"
+      placeholder: "Nueva dirección: Calle 45, Edificio..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_contacto
+    attributes:
+      label: "📞 Nueva Información de Contacto"
+      description: "Si cambió el teléfono o email, proporciona la nueva información"
+      placeholder: "Nuevo teléfono: +507 987-6543, Nuevo email: nuevo@email.com"
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_incentivos
+    attributes:
+      label: "💰 Cambios en Incentivos"
+      description: "Si cambiaron los incentivos, describe los cambios"
+      placeholder: "Ahora ofrecen descuentos del 10% en lugar de puntos..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: detalle_otro_cambio
+    attributes:
+      label: "📝 Otro Cambio"
+      description: "Si seleccionaste 'Otro cambio', describe qué cambió"
+      placeholder: "Describe el cambio que observaste..."
+    validations:
+      required: false
+
+  # SECCIÓN COMÚN
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 📝 Información Adicional
+
+  - type: textarea
+    id: informacion_adicional
+    attributes:
+      label: "📋 Información Adicional"
+      description: "Cualquier información adicional que consideres relevante"
+      placeholder: "Requisitos especiales, accesibilidad, etc."
+    validations:
+      required: false
+
+  - type: input
+    id: fecha_visita
+    attributes:
+      label: "📅 Fecha de Visita"
+      description: "¿Cuándo visitaste o verificaste esta información?"
+      placeholder: "Enero 2025"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: verificacion
+    attributes:
+      label: "✅ Verificación"
+      description: "Por favor confirma lo siguiente"
+      options:
+        - label: "He verificado que esta información es precisa según mi conocimiento."
+          required: true
+        - label: "Tengo permiso para compartir esta información públicamente."
+          required: true
+
+  - type: checkboxes
+    id: codigo_conducta
+    attributes:
+      label: "¿Has Leído Nuestro Código de Conducta?"
+      description: "Por favor confirma que has leído y entendido nuestro [Código de Conducta](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
+      options:
+        - label: "Sí, he leído y acepto el Código de Conducta."
+          required: true
