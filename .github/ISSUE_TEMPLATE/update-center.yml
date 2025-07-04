@@ -13,12 +13,12 @@ body:
 
         **⚠️ IMPORTANTE:** Para actualizar un punto existente, debes usar el nombre EXACTO como aparece en nuestro directorio de puntos de reciclaje.
 
-        ---
-
         **¿Te equivocaste de plantilla?** 🤔
 
         Si quieres **agregar un punto nuevo** que no existe en nuestro directorio, usa esta plantilla:
-        📝 **[Crear Nuevo Punto de Reciclaje](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/.github/ISSUE_TEMPLATE/new-center.yml)**
+        📝 **[Crear Nuevo Punto de Reciclaje](https://github.com/Aqui-Reciclo-Panama/aqui_reciclo_pa/issues/new?template=new-center.yml)**
+
+        ---
 
   - type: dropdown
     id: fuente_informacion
@@ -26,6 +26,7 @@ body:
       label: "🔍 Fuente de Información"
       description: "¿Cómo obtuviste esta información?"
       options:
+        - ""
         - "Trabajo/soy dueño del punto de reciclaje"
         - "Visité el punto personalmente"
         - "Lo vi en redes sociales/internet"
@@ -36,6 +37,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ## 📍 Identificación del Punto
 
   - type: input
@@ -59,6 +62,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ## 🔍 ¿Qué ha cambiado?
 
   - type: checkboxes
@@ -80,7 +85,10 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ## 📝 Detalles de los Cambios
+
         *Completa solo las secciones relevantes según lo que seleccionaste arriba*
 
   - type: textarea
@@ -159,6 +167,7 @@ body:
     attributes:
       value: |
         ---
+
         ## 📝 Información Adicional
 
   - type: textarea
