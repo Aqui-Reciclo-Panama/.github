@@ -12,12 +12,12 @@ body:
         Estás reportando un **nuevo punto de reciclaje** que no está en nuestro directorio.
         Por favor proporciona la mayor cantidad de detalles posibles.
 
-        ---
-
         **¿Te equivocaste de plantilla?** 🤔
 
         Si quieres **actualizar un punto** que ya existe en nuestro directorio, usa esta plantilla:
-        📝 **[Actualizar Punto Existente](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/.github/ISSUE_TEMPLATE/update-center.yml)**
+        📝 **[Actualizar Punto Existente](https://github.com/Aqui-Reciclo-Panama/aqui_reciclo_pa/issues/new?template=update-center.yml)**
+
+        ---
 
   - type: dropdown
     id: fuente_informacion
@@ -25,6 +25,7 @@ body:
       label: "🔍 Fuente de Información"
       description: "¿Cómo obtuviste esta información?"
       options:
+        - ""
         - "Trabajo/soy dueño del punto de reciclaje"
         - "Visité el punto personalmente"
         - "Lo vi en redes sociales/internet"
@@ -37,14 +38,16 @@ body:
     attributes:
       label: "📍 Nombre del Punto Limpio"
       description: "Nombre del centro de reciclaje o punto limpio"
-      placeholder: "Centro de Reciclaje Verde"
     validations:
       required: true
 
   - type: markdown
     attributes:
       value: |
+        ---
+
         ### 📄 ¿Eres dueño u operador del punto?
+
         Si eres dueño u operador del punto de reciclaje, puedes:
         1. **[Descargar nuestra plantilla Excel](https://raw.githubusercontent.com/Aqui-Reciclo-Panama/.github/main/templates/template-recycling-center.xlsx)** 📥
         2. Completar todos los campos
@@ -63,9 +66,10 @@ body:
   - type: markdown
     attributes:
       value: |
-        💡 **Tip:** Si no eres dueño del punto, puedes llenar la información que tengas disponible en las siguientes secciones.
+        💡 **Nota:** Si no eres dueño del punto, puedes llenar la información que tengas disponible en las siguientes secciones.
 
         ---
+
         ## 📋 Información Básica del Punto
 
   - type: input
@@ -73,14 +77,8 @@ body:
     attributes:
       label: "🏢 Entidad/Empresa"
       description: "Organización o empresa que opera el punto de reciclaje"
-      placeholder: "Empresa ABC"
     validations:
       required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        ## 📍 Ubicación
 
   - type: dropdown
     id: provincia
@@ -110,7 +108,6 @@ body:
     attributes:
       label: "🏘️ Distrito"
       description: "Distrito donde se encuentra el punto de reciclaje"
-      placeholder: "Distrito ABC"
     validations:
       required: true
 
@@ -119,7 +116,6 @@ body:
     attributes:
       label: "📍 Corregimiento"
       description: "Corregimiento donde se encuentra el punto de reciclaje"
-      placeholder: "Corregimiento ABC"
     validations:
       required: false
 
@@ -144,6 +140,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ## 📞 Información de Contacto
 
   - type: input
@@ -167,6 +165,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ## 💰 Incentivos y Horarios
 
   - type: dropdown
@@ -203,6 +203,8 @@ body:
   - type: markdown
     attributes:
       value: |
+        ---
+
         ## ♻️ Materiales que Acepta
 
   - type: checkboxes
@@ -295,6 +297,7 @@ body:
     attributes:
       value: |
         ---
+
         ## 📝 Información Adicional
 
   - type: textarea
