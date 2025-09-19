@@ -1,56 +1,56 @@
-name: "♻️ Feature Request"
-description: "Suggest a new feature or improvement for our project."
-title: "♻️ Feature Request: ..."
-labels: ["feature"]
+name: "♻️ Solicitud de Funcionalidad"
+description: "Sugiere una nueva funcionalidad o mejora para nuestro proyecto."
+title: "♻️ Solicitud de Funcionalidad: ..."
+labels: ["funcionalidad"]
 assignees: []
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out our form 🙏
+        ¡Gracias por tomarte el tiempo de completar nuestro formulario! 🙏
 
   - type: textarea
-    id: background
+    id: contexto
     attributes:
-      label: "📅 Background"
-      description: "Explain the motivation behind this feature request. Describe why it would be helpful or what need it fulfills."
-      placeholder: "It would be helpful if [...]"
+      label: "📅 Contexto"
+      description: "Explica la motivación detrás de esta solicitud. Describe por qué sería útil o qué necesidad satisfaría."
+      placeholder: "Sería útil si [...]"
     validations:
       required: true
 
   - type: textarea
-    id: solution
+    id: solucion
     attributes:
-      label: "🎯 Describe the Solution You'd Like"
-      description: "Clearly describe what you’d like to see happen, outlining any new functionality or changes."
-      placeholder: "Describe the desired outcome or behavior."
+      label: "🎯 Describe la Solución que Te Gustaría"
+      description: "Describe claramente lo que te gustaría que pasara, detallando cualquier funcionalidad nueva o cambios."
+      placeholder: "Describe el resultado o comportamiento deseado."
     validations:
       required: true
 
   - type: textarea
-    id: additional_context
+    id: contexto_adicional
     attributes:
-      label: "📷 Additional Context"
-      description: "Include any other relevant information, screenshots, or examples to help us understand your request better."
-      placeholder: "Provide extra details if available."
+      label: "📷 Contexto Adicional"
+      description: "Incluye cualquier otra información relevante, capturas de pantalla o ejemplos que nos ayuden a entender mejor tu solicitud."
+      placeholder: "Proporciona detalles extra si están disponibles."
     validations:
       required: false
 
   - type: checkboxes
-    id: similar_requests
+    id: solicitudes_similares
     attributes:
-      label: "Have You Checked for Similar Requests?"
-      description: "Ensure this request hasn’t already been discussed in a prior issue by searching our issues list."
+      label: "¿Has Verificado Solicitudes Similares?"
+      description: "Asegúrate de que esta solicitud no haya sido discutida previamente buscando en nuestra lista de issues."
       options:
-        - label: "Yes, I have checked for similar requests, and this is unique."
+        - label: "Sí, he verificado solicitudes similares y esta es única."
           required: true
 
   - type: checkboxes
-    id: code_of_conduct
+    id: codigo_conducta
     attributes:
-      label: "Have You Read Our Code of Conduct?"
-      description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
+      label: "¿Has Leído Nuestro Código de Conducta?"
+      description: "Por favor confirma que has leído y entendido nuestro [Código de Conducta](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
       options:
-        - label: "Yes, I have read and agree to the Code of Conduct."
+        - label: "Sí, he leído y acepto el Código de Conducta."
           required: true
