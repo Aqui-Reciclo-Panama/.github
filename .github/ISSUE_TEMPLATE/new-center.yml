@@ -1,29 +1,24 @@
-name: "🆕 Nuevo Punto de Reciclaje"
-description: "Reportar un nuevo punto de reciclaje que no está en nuestro directorio."
-title: "🆕 Nuevo Punto: [Nombre del Punto]"
-labels: ["nuevo-punto", "punto-reciclaje"]
-assignees: []
 body:
   - type: markdown
     attributes:
       value: |
-        ¡Gracias por ayudarnos a expandir nuestra red de reciclaje! 🌱
+        # 🌱 ¡Gracias por reportar un nuevo punto de reciclaje!
 
-        Estás reportando un **nuevo punto de reciclaje** que no está en nuestro directorio.
-        Por favor proporciona la mayor cantidad de detalles posibles.
+        **Antes de continuar, por favor verifica que este punto NO esté ya registrado en nuestra plataforma.**
 
-        **¿Te equivocaste de plantilla?** 🤔
+        La forma más fácil de verificar esto es:
+        1. Usa los filtros por **ubicación** y **material** para reducir los resultados
+        3. Revisa si tu punto ya aparece en la lista
 
-        Si quieres **actualizar un punto** que ya existe en nuestro directorio, usa esta plantilla:
-        📝 **[Actualizar Punto Existente](https://github.com/Aqui-Reciclo-Panama/aqui_reciclo_pa/issues/new?template=update-center.yml)**
+        📝 **¿Necesitas actualizar información de un punto existente?** 
+        Usa este formulario: [Actualizar Centro de Reciclaje](https://github.com/Aqui-Reciclo-Panama/.github/issues/new?template=update-center.yml)
 
         ---
 
   - type: dropdown
     id: fuente_informacion
     attributes:
-      label: "🔍 Fuente de Información"
-      description: "¿Cómo obtuviste esta información?"
+      label: "🔍 ¿Cómo obtuviste esta información?"
       options:
         - ""
         - "Trabajo/soy dueño del punto de reciclaje"
@@ -36,55 +31,23 @@ body:
   - type: input
     id: nombre_punto
     attributes:
-      label: "📍 Nombre del Punto Limpio"
-      description: "Nombre del centro de reciclaje o punto limpio"
+      label: "📍 Nombre del Punto de Reciclaje"
+      description: "Nombre completo del centro o punto limpio"
     validations:
       required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-
-        ### 📄 ¿Eres dueño u operador del punto?
-
-        Si eres dueño u operador del punto de reciclaje, puedes:
-        1. **[Descargar nuestra plantilla Excel](https://raw.githubusercontent.com/Aqui-Reciclo-Panama/.github/main/templates/template-recycling-center.xlsx)** 📥
-        2. Completar todos los campos
-        3. Subirla aquí abajo
-
-        Esto nos ayudará a procesar tu información más rápidamente.
-
-  - type: textarea
-    id: plantilla_completa
-    attributes:
-      label: "📎 Plantilla Completa (Arrastra y suelta el archivo aquí)"
-      description: "Si completaste nuestra plantilla Excel/PDF, pega aquí el contenido"
-    validations:
-      required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        💡 **Nota:** Si no eres dueño del punto, puedes llenar la información que tengas disponible en las siguientes secciones.
-
-        ---
-
-        ## 📋 Información Básica del Punto
 
   - type: input
     id: entidad_empresa
     attributes:
-      label: "🏢 Entidad/Empresa"
-      description: "Organización o empresa que opera el punto de reciclaje"
+      label: "🏢 Empresa u Organización"
+      description: "¿Quién opera este punto de reciclaje?"
     validations:
-      required: false
+      required: true
 
   - type: dropdown
     id: provincia
     attributes:
       label: "🗺️ Provincia"
-      description: "Selecciona la provincia donde se encuentra el punto de reciclaje"
       options:
         - ""
         - "Bocas del Toro"
@@ -103,28 +66,12 @@ body:
     validations:
       required: true
 
-  - type: input
-    id: distrito
-    attributes:
-      label: "🏘️ Distrito"
-      description: "Distrito donde se encuentra el punto de reciclaje"
-    validations:
-      required: true
-
-  - type: input
-    id: corregimiento
-    attributes:
-      label: "📍 Corregimiento"
-      description: "Corregimiento donde se encuentra el punto de reciclaje"
-    validations:
-      required: false
-
   - type: textarea
     id: direccion
     attributes:
-      label: "🏠 Dirección Exacta"
-      description: "Dirección completa del punto de reciclaje"
-      placeholder: "Calle 123, Edificio ABC, Planta Baja"
+      label: "🏠 Dirección Completa"
+      description: "Incluye puntos de referencia para facilitar la ubicación"
+      placeholder: "Ej: Calle 50, Edificio Torre Global, Planta Baja, frente al Metro Mall"
     validations:
       required: true
 
@@ -132,23 +79,22 @@ body:
     id: google_maps
     attributes:
       label: "🗺️ Enlace de Google Maps"
-      description: "Enlace de Google Maps donde se encuentra el punto de reciclaje"
+      description: "Copia y pega el enlace de Google Maps de la ubicación exacta"
       placeholder: "https://maps.google.com/..."
     validations:
-      required: false
+      required: true
 
   - type: markdown
     attributes:
       value: |
         ---
-
-        ## 📞 Información de Contacto
+        ## 📞 Contacto e Información Básica
 
   - type: input
     id: telefono
     attributes:
-      label: "📞 Teléfono de Contacto del Punto"
-      description: "Número de teléfono del punto de reciclaje (no tu número personal)"
+      label: "📞 Teléfono del Punto"
+      description: "Número de contacto del centro (no tu número personal)"
       placeholder: "+507 123-4567"
     validations:
       required: false
@@ -156,38 +102,31 @@ body:
   - type: input
     id: email
     attributes:
-      label: "📧 Email de Contacto del Punto"
-      description: "Dirección de correo electrónico del punto de reciclaje (no tu email personal)"
+      label: "📧 Email del Punto"
+      description: "Correo del centro (no tu email personal)"
       placeholder: "info@reciclaje.com"
     validations:
       required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-
-        ## 💰 Incentivos y Horarios
 
   - type: dropdown
     id: incentivos
     attributes:
       label: "💰 ¿Ofrece Incentivos?"
-      description: "¿El punto de reciclaje ofrece incentivos?"
+      description: "¿Dan descuentos, puntos, dinero o algún beneficio por reciclar?"
       options:
         - ""
         - "Sí"
         - "No"
         - "No lo sé"
     validations:
-      required: false
+      required: true
 
   - type: textarea
     id: describir_incentivos
     attributes:
-      label: "🎁 Describir Incentivos"
-      description: "Si ofrece incentivos, describe cuáles son"
-      placeholder: "Descuentos, puntos, dinero en efectivo, etc."
+      label: "🎁 ¿Qué Incentivos Ofrece?"
+      description: "Solo completa si seleccionaste 'Sí' arriba"
+      placeholder: "Ej: B/. 0.10 por libra de plástico, descuentos en compras, puntos canjeables"
     validations:
       required: false
 
@@ -195,23 +134,21 @@ body:
     id: horarios
     attributes:
       label: "🕐 Horarios de Atención"
-      description: "Horarios de atención del punto de reciclaje"
-      placeholder: "Lunes a viernes: 8:00 AM - 5:00 PM\nSábados: 8:00 AM - 12:00 PM\nDomingos: Cerrado"
+      placeholder: "Ej: Lun-Vie: 8AM-5PM, Sáb: 8AM-12PM, Dom: Cerrado"
     validations:
-      required: false
+      required: true
 
   - type: markdown
     attributes:
       value: |
         ---
-
         ## ♻️ Materiales que Acepta
+        **Selecciona SOLO los materiales que sepas con certeza que acepta este punto**
 
   - type: checkboxes
     id: materiales_no_peligrosos
     attributes:
       label: "♻️ Materiales No Peligrosos"
-      description: "Selecciona todos los materiales no peligrosos que acepta"
       options:
         - label: "Periódicos"
         - label: "Directorios / Guías Telefónicas"
@@ -247,12 +184,14 @@ body:
         - label: "Residuos de construcción y demolición"
         - label: "Textiles"
         - label: "Residuos voluminosos"
+    validations:
+      required: true
 
   - type: checkboxes
     id: materiales_peligrosos
     attributes:
       label: "⚠️ Materiales Peligrosos"
-      description: "Selecciona todos los materiales peligrosos que acepta"
+      description: "Solo selecciona si estás seguro que los acepta"
       options:
         - label: "Aceite de cocina"
         - label: "Aceite de motor"
@@ -268,7 +207,7 @@ body:
     id: raee
     attributes:
       label: "🔌 RAEE (Residuos de Aparatos Eléctricos y Electrónicos)"
-      description: "Selecciona todos los residuos electrónicos que acepta"
+      description: "Solo selecciona si estás seguro que los acepta"
       options:
         - label: "Lámparas y bombillas"
         - label: "Paneles fotovoltaicos"
@@ -293,49 +232,29 @@ body:
         - label: "Congeladores"
         - label: "Radiadores"
 
-  - type: markdown
-    attributes:
-      value: |
-        ---
-
-        ## 📝 Información Adicional
-
   - type: textarea
     id: informacion_adicional
     attributes:
-      label: "📋 Información Adicional"
-      description: "Cualquier información adicional que consideres relevante"
-      placeholder: "Requisitos especiales, accesibilidad, características notables, etc."
+      label: "📝 Información Extra"
+      description: "Cualquier detalle importante (opcional)"
+      placeholder: "Ej: Solo atienden empresas, requieren cita previa, acceso para discapacitados"
     validations:
       required: false
 
   - type: input
     id: fecha_visita
     attributes:
-      label: "📅 Fecha de Visita"
-      description: "¿Cuándo visitaste o verificaste esta información?"
-      placeholder: "Enero 2025"
+      label: "📅 ¿Cuándo verificaste esta información?"
+      placeholder: "Ej: Enero 2025, Esta semana"
     validations:
       required: false
 
   - type: checkboxes
     id: verificacion
     attributes:
-      label: "✅ Verificación"
-      description: "Por favor confirma lo siguiente"
+      label: "✅ Confirmación Final"
       options:
-        - label: "He verificado que esta información es precisa según mi conocimiento."
+        - label: "Confirmé que este punto NO está registrado"
           required: true
-        - label: "Tengo permiso para compartir esta información públicamente."
-          required: true
-        - label: "Confirmo que este es un NUEVO punto que no está en el directorio actual."
-          required: true
-
-  - type: checkboxes
-    id: codigo_conducta
-    attributes:
-      label: "¿Has Leído Nuestro Código de Conducta?"
-      description: "Por favor confirma que has leído y entendido nuestro [Código de Conducta](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
-      options:
-        - label: "Sí, he leído y acepto el Código de Conducta."
+        - label: "La información que proporciono es precisa según mi conocimiento"
           required: true

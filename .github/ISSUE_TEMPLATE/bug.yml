@@ -1,67 +1,67 @@
-name: "🐞 Bug Report"
-description: "Submit a bug report to help us improve."
-title: "🐞 Bug Report: ..."
-labels: ["bug"]
+name: "🐞 Reporte de Error"
+description: "Reporta un error para ayudarnos a mejorar."
+title: "🐞 Reporte de Error: ..."
+labels: ["error"]
 assignees: []
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out our form 🙏
+        ¡Gracias por tomarte el tiempo de completar nuestro formulario! 🙏
 
   - type: textarea
-    id: steps
+    id: pasos_reproduccion
     attributes:
-      label: "📝 Reproduction steps"
-      description: "How do you trigger this bug? Please walk us through it step by step."
-      placeholder: "When I [...]"
+      label: "📝 ¿Cómo Reproducir el Error?"
+      description: "Cuéntanos paso a paso qué hiciste cuando apareció el problema."
+      placeholder: "1. Entré a la página...\n2. Hice clic en...\n3. Entonces aparece..."
     validations:
       required: true
 
   - type: textarea
-    id: expected
+    id: comportamiento_esperado
     attributes:
-      label: "🤙 Expected behavior"
-      description: "What did you think would happen?"
-      placeholder: "It should [...]"
+      label: "👍 ¿Qué Debería Pasar?"
+      description: "¿Cuál era el resultado que esperabas?"
+      placeholder: "Esperaba que..."
     validations:
       required: true
 
   - type: textarea
-    id: actual
+    id: comportamiento_actual
     attributes:
-      label: "👎 Actual Behavior"
-      description: "What did actually happen? Add screenshots, if applicable."
-      placeholder: "It actually [...]"
+      label: "👎 ¿Qué Pasó en Realidad?"
+      description: "Describe qué es lo que está fallando. Puedes agregar capturas de pantalla."
+      placeholder: "En lugar de eso, lo que pasó fue..."
     validations:
       required: true
 
   - type: dropdown
-    id: browsers
+    id: navegadores
     attributes:
-      label: "🌐 What browsers are you seeing the problem on?"
+      label: "🌐 ¿En qué navegadores estás viendo el problema?"
       multiple: true
       options:
         - "Firefox"
         - "Chrome"
         - "Safari"
-        - "Microsoft Edge"
+        - "Otro"
 
   - type: checkboxes
-    id: similar_requests
+    id: reportes_similares
     attributes:
-      label: "Have You Checked for Similar Requests?"
-      description: "Ensure this request hasn’t already been discussed in a prior issue by searching our issues list."
+      label: "¿Has Verificado Reportes Similares?"
+      description: "Asegúrate de que este problema no haya sido reportado previamente buscando en nuestra lista de issues."
       options:
-        - label: "Yes, I have checked for similar requests, and this is unique."
+        - label: "Sí, he verificado reportes similares y este es único."
           required: true
 
   - type: checkboxes
-    id: code_of_conduct
+    id: codigo_conducta
     attributes:
-      label: "Have You Read Our Code of Conduct?"
-      description: "Please confirm you’ve read and understood our [Code of Conduct](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
+      label: "¿Has Leído Nuestro Código de Conducta?"
+      description: "Por favor confirma que has leído y entendido nuestro [Código de Conducta](https://github.com/Aqui-Reciclo-Panama/.github/blob/main/CODE_OF_CONDUCT.md)."
       options:
-        - label: "Yes, I have read and agree to the Code of Conduct."
+        - label: "Sí, he leído y acepto el Código de Conducta."
           required: true
