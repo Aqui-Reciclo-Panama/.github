@@ -46,7 +46,6 @@ body:
     attributes:
       label: "🏠 Dirección Completa"
       description: "Incluye puntos de referencia para facilitar la ubicación"
-      placeholder: ""
     validations:
       required: true
 
