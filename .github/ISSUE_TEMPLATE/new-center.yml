@@ -57,49 +57,12 @@ body:
     validations:
       required: true
 
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ## 📞 Contacto e Información Básica
-
   - type: input
-    id: telefono
+    id: contacto
     attributes:
-      label: "📞 Teléfono del Punto"
-      description: "Número de contacto del centro (no tu número personal)"
-      placeholder: "+507 123-4567"
-    validations:
-      required: false
-
-  - type: input
-    id: email
-    attributes:
-      label: "📧 Email del Punto"
-      description: "Correo del centro (no tu email personal)"
-      placeholder: "info@reciclaje.com"
-    validations:
-      required: false
-
-  - type: dropdown
-    id: incentivos
-    attributes:
-      label: "💰 ¿Ofrece Incentivos?"
-      description: "¿Dan descuentos, puntos, dinero o algún beneficio por reciclar?"
-      options:
-        - ""
-        - "Sí"
-        - "No"
-        - "No lo sé"
-    validations:
-      required: true
-
-  - type: textarea
-    id: describir_incentivos
-    attributes:
-      label: "🎁 ¿Qué Incentivos Ofrece?"
-      description: "Solo completa si seleccionaste 'Sí' arriba"
-      placeholder: "Ej: B/. 0.10 por libra de plástico, descuentos en compras, puntos canjeables"
+      label: "📞 Teléfono o Email del Punto"
+      description: "Número de contacto o email del centro"
+      placeholder: "+507 123-4567 / punto123@mail.com"
     validations:
       required: false
 
@@ -148,12 +111,8 @@ body:
       label: "⚠️ Materiales Peligrosos"
       description: "Solo selecciona si estás seguro que los acepta"
       options:
-        - label: "Pilas"
+        - label: "Baterías"
         - label: "Envases peligrosos"
-        - label: "Baterías alcalinas"
-        - label: "Baterías de litio"
-        - label: "Baterías de ácido de gel"
-        - label: "Baterías de ácido en líquido"
 
   - type: checkboxes
     id: raee
