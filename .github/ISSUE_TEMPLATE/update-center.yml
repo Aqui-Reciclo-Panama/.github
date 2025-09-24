@@ -41,7 +41,7 @@ body:
     attributes:
       label: "🔗 Enlace del Punto de Reciclaje"
       description: "Ve a aquireciclo.org, busca el punto, entra a la pestaña 'Detalles', y copia el enlace completo"
-      placeholder: "https://aquireciclo.org/punto/123-nombre-del-punto"
+      placeholder: "https://aquireciclo.com.pa/centro/68c7af9e04ab62162136"
     validations:
       required: true
 
@@ -50,7 +50,7 @@ body:
     attributes:
       label: "🗺️ Ubicación (para confirmar que es el punto correcto)"
       description: "Provincia y dirección aproximada"
-      placeholder: "Ej: Panamá, Calle 50, cerca del Metro Mall"
+      placeholder: "Ej: Panamá, Biomuseo, cerca de los estacionamientos"
     validations:
       required: true
 
