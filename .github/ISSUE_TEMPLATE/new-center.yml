@@ -32,15 +32,7 @@ body:
         - "Otro"
     validations:
       required: true
-
-  - type: input
-    id: nombre_punto
-    attributes:
-      label: "📍 Nombre del Punto de Reciclaje"
-      description: "Nombre completo del centro o punto limpio"
-    validations:
-      required: true
-
+      
   - type: input
     id: entidad_empresa
     attributes:
@@ -49,34 +41,12 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: provincia
-    attributes:
-      label: "🗺️ Provincia"
-      options:
-        - ""
-        - "Bocas del Toro"
-        - "Chiriquí"
-        - "Coclé"
-        - "Colón"
-        - "Darién"
-        - "Herrera"
-        - "Los Santos"
-        - "Panamá"
-        - "Panamá Oeste"
-        - "Veraguas"
-        - "Guna Yala"
-        - "Emberá-Wounaan"
-        - "Ngäbe-Buglé"
-    validations:
-      required: true
-
   - type: textarea
     id: direccion
     attributes:
       label: "🏠 Dirección Completa"
       description: "Incluye puntos de referencia para facilitar la ubicación"
-      placeholder: "Ej: Calle 50, Edificio Torre Global, Planta Baja, frente al Metro Mall"
+      placeholder: ""
     validations:
       required: true
 
@@ -241,7 +211,6 @@ body:
     attributes:
       label: "📝 Información Extra"
       description: "Cualquier detalle importante (opcional)"
-      placeholder: "Ej: Solo atienden empresas, requieren cita previa, acceso para discapacitados"
     validations:
       required: false
 
