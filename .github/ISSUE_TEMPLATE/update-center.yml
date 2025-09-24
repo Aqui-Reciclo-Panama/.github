@@ -7,9 +7,6 @@ body:
   - type: markdown
     attributes:
       value: |
-        # 🔄 Actualizar Punto de Reciclaje Existente
-
-        **¿Encontraste cambios en un punto que ya está registrado?** ¡Gracias por ayudarnos a mantener la información actualizada!
 
         **⚠️ IMPORTANTE:** Para actualizar correctamente, necesitas el enlace exacto del punto.
 
