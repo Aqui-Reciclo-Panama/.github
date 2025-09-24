@@ -7,8 +7,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        # 🌱 ¡Gracias por reportar un nuevo punto de reciclaje!
-
+        
         **Antes de continuar, por favor verifica que este punto NO esté ya registrado en nuestra plataforma.**
 
         La forma más fácil de verificar esto es:
